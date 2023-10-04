@@ -97,6 +97,18 @@ img {
     .chat-col {
         width: 85%;
     }
+
+    .notify-row {
+        display: none;
+    }
+
+    .find-chat-row {
+        display: none;
+    }
+
+    .contacts-list {
+        min-height: 90%;
+    }
 }
 
 @media screen and (max-width: 768px) {
