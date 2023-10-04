@@ -8,15 +8,53 @@ img {
     width: 100%;
 }
 
+/* ROOT */
+:root {
+    --tb-color: #EAEAEA;
+    --notify-color: #8EDAFC;
+    --icons-color: #B1B1B1;
+    --mychat-color: #D5F9BA;
+    --vocal-color: #6B7376;
+    --search-bg-color: #FAFAFA;
+    --black-color: #000;
+    --white-color: #fff;
+    --gray-color: gray;
+    --notify-icon-bg: #F2FBFF;
+}
 
+/* COMMON */
+body {
+    font-family: 'Open Sans', sans-serif;
+    /* debug */
+    background-color: lightgrey;
+}
+
+.flexer {
+    display: flex;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+/* text */
+.fw-600 {
+    font-weight: 600;
+}
+
+.fs-08 {
+    font-size: .8rem;
+}
+
+.underline {
+    text-decoration: underline;
+}
 /* CONTAINER */
 .container {
     width: 80%;
     height: 95vh;
     margin: 2.5vh auto;
     display: flex;
-    /* debug */
-    background-color: red;
 }
 
 @media screen and (max-width: 992px) {
@@ -28,46 +66,101 @@ img {
 }
 
 /* CONTACTS COLUMN */
-
 .contacts-col {
-    width: 30%;
-    /* debug */
-    background-color: blue;
-    min-height: 100%;
+    width: 35%;
+    height: 100%;
 }
 
+/* me row */
 .me-row {
-    /* debug */
-    min-height: 10%;
-    background-color: aqua;
+    height: 10%;
+    background-color: var(--tb-color);
+    padding: .5rem;
 }
 
+.icons {
+    font-size: 1.3rem;
+    padding: .5rem 0;
+}
+
+.icons i {
+    margin-left: 1rem;
+    color: var(--icons-color);
+}
+
+/* notifications row */
 .notify-row {
-    /* debug */
-    min-height: 10%;
-    background-color: lightblue;
+    height: 10%;
+    background-color: var(--notify-color);
+    padding: .4rem;
 }
 
-.find-chat-row {
-    min-height: 5%;
-    background-color: gray;
+.notify-row .avatar {
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.3rem;
+    background-color: var(--notify-icon-bg);
+    color: var(--notify-color);
 }
 
+/* find chat row */
+.search-chat-row {
+    height: 6%;   
+    background-color: var(--search-bg-color);
+    padding: .2rem .5rem;
+}
+
+.search-chat {
+    color: var(--gray-color);
+    gap: 1rem;
+    padding: .2rem .5rem;
+    background-color: white;
+}
+
+.search-chat-row input{
+    width: 80%;
+    height: 1rem;
+    border: 0;
+    font-size: .8rem;
+}
+
+/* contact list */
 .contacts-list {
-    max-height: 75%;
-    border: 1px solid black;
+    height: 74%;
     overflow-y: auto;
 }
 
 .contacts-list li{
-    min-height: 10vh;
-    background-color: lightgreen;
+    background-color: var(--white-color);
+    padding: .5rem;
+    display: flex;
+    border-bottom: 1px solid var(--tb-color);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.preview {
+    height: 3rem;
+    width: 80%;
+    margin-left: .5rem;
+    line-height: 1.5rem;
+}
+
+.msg-preview {
+    font-size: .75rem;
+}
+
+.time {
+    font-size: .7rem;
 }
 
 /* CHAT COLUMN */
-
 .chat-col {
-    width: 70%;
+    width: 65%;
     /* debug */
     background-color: green;
     min-height: 100%;
@@ -88,26 +181,51 @@ img {
     min-height: 10%;
     background-color: lightpink;
 }
+
 /* RESPONSIVE */
 @media screen and (max-width: 992px) {
+    /* contacts column */
     .contacts-col {
-        width: 15%;
+        width: 10%;
+    }
+    
+    .me-row {
+        height: 15vh;
+        padding: .8rem;
+        text-align: center;
+        display: block;
     }
 
-    .chat-col {
-        width: 85%;
+    .icons {
+        display: none;
     }
 
     .notify-row {
         display: none;
     }
 
-    .find-chat-row {
+    .search-chat-row {
         display: none;
     }
 
     .contacts-list {
-        min-height: 90%;
+        height: 85vh;
+        overflow-y: auto;
+    }
+    
+    .contacts-list li{
+        display: block;
+        padding: .8rem;
+        text-align: center;
+    }
+
+    .preview {
+        display: none;
+    }
+
+    /* chat column */
+     .chat-col {
+        width: 90%;
     }
 }
 
