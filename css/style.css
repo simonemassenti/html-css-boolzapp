@@ -38,8 +38,30 @@ img {
 
 .me-row {
     /* debug */
-    min-height: 10vh;
+    min-height: 10%;
     background-color: aqua;
+}
+
+.notify-row {
+    /* debug */
+    min-height: 10%;
+    background-color: lightblue;
+}
+
+.find-chat-row {
+    min-height: 5%;
+    background-color: gray;
+}
+
+.contacts-list {
+    max-height: 75%;
+    border: 1px solid black;
+    overflow-y: auto;
+}
+
+.contacts-list li{
+    min-height: 10vh;
+    background-color: lightgreen;
 }
 
 /* CHAT COLUMN */
@@ -53,10 +75,19 @@ img {
 
 .chat-head{
     /* debug */
-    min-height: 10vh;
+    min-height: 10%;
     background-color: lightblue;
 }
 
+.chat {
+    min-height: 80%;
+    background-color: lightsalmon;
+}
+
+.msg-bar {
+    min-height: 10%;
+    background-color: lightpink;
+}
 /* RESPONSIVE */
 @media screen and (max-width: 992px) {
     .contacts-col {
