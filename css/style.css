@@ -223,6 +223,10 @@ body {
     position: relative;
 }
 
+.msg-txt {
+    margin-bottom: 1rem;
+}
+
 .my-msg {
     background-color: var(--mychat-color);
 }
@@ -381,4 +385,3 @@ body {
         width: 100%;
     }
 }
-
