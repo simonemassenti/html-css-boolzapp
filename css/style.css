@@ -21,6 +21,7 @@ img {
     --white-color: #fff;
     --gray-color: #808080;
     --notify-icon-bg: #F2FBFF;
+    --hover-color: #F4F5F5;
     
     /* heights */
     --head-height: 60px;
@@ -155,6 +156,10 @@ body {
     border-bottom: 1px solid var(--tb-color);
 }
 
+.contacts-list li:hover {
+    background-color: var(--hover-color);
+}
+
 .avatar {
     width: 40px;
     height: 40px;
@@ -215,6 +220,7 @@ body {
     max-width: 60%;
     border-radius: 10px;
     padding: .5rem;
+    position: relative;
 }
 
 .my-msg {
@@ -256,6 +262,31 @@ body {
     font-size: 1.5rem;
     margin: 0 1rem;
     color: var(--vocal-color);
+}
+
+.dropdown {
+    width: 150px;
+    position: absolute;
+    background-color: var(--white-color);
+    top: 25px;
+    right: 25px;
+    display: none;
+    color: var(--black-color);
+    font-size: .8rem;
+    z-index: 999;
+    box-shadow: 1px 1px 20px var(--gray-color);
+}
+
+.dropdown div {
+    padding: .5rem;
+}
+
+.dropdown div:hover {
+    background-color: var(--hover-color);
+}
+
+.show-dropdown:hover .dropdown {
+    display: block;
 }
 
 /* RESPONSIVE */
