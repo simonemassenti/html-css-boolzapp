@@ -289,6 +289,30 @@ body {
     display: block;
 }
 
+.vocal:active {
+    text-align: center;
+    color: var(--notify-color);
+    scale: 1.1;
+    border: 1px solid lightblue;
+    width: 2.5rem;
+    margin: 0 .4rem;
+    border-radius: 50%;
+    animation: vocal-msg 1.5s linear infinite;
+}
+
+@keyframes vocal-msg {
+    
+    25% {
+        transform: rotate(30deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
+    }
+
+}
+
+
 /* RESPONSIVE */
 @media screen and (max-width: 991px) {
     /* contacts column */
@@ -357,3 +381,4 @@ body {
         width: 100%;
     }
 }
+
