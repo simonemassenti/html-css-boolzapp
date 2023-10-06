@@ -22,6 +22,8 @@ img {
     --gray-color: #808080;
     --notify-icon-bg: #F2FBFF;
     --hover-color: #F4F5F5;
+    --bg-color: #DADBD4;
+    --bg-green: #009688;
     
     /* heights */
     --head-height: 60px;
@@ -33,8 +35,6 @@ img {
 /* COMMON */
 body {
     font-family: 'Open Sans', sans-serif;
-    /* debug */
-    background-color: lightgrey;
 }
 
 .flexer {
@@ -66,12 +66,30 @@ body {
     text-decoration: underline;
 }
 
+/* WRAPPER */
+.wrapper {
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+    padding: 2.5vh;
+}
+
+.bg-green {
+    width: 100%;
+    height: 15vh;
+    background-color: var(--bg-green);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
 /* CONTAINER */
 .container {
     width: 80%;
     height: 95vh;
-    margin: 2.5vh auto;
+    margin: 0 auto;
     display: flex;
+    position: relative;
 }
 
 @media screen and (max-width: 992px) {
@@ -79,6 +97,10 @@ body {
         width: 100%;
         height: 100vh;
         margin: 0;
+    }
+
+    .wrapper {
+        padding: 0;
     }
 }
 
